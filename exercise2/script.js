@@ -31,6 +31,8 @@
     return positions[positions.length - 1];
   };
 
-  console.log(getColumnPosition('ab'));
+  // Here we go!
+  var foo = getColumnPosition('AAA');
+  console.log(foo);
 
 })(undefined, window, document, _);
