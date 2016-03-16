@@ -1,6 +1,6 @@
 ; // the secret!
 
-(function(undefined, window, dodument, _){
+(function(undefined, window, document, _){
 
   /**
    * getColumnPosition
