@@ -7,6 +7,7 @@ body {
   position: absolute;
   top: 0;
   right: 0;
+  background: white;
 }
 
 .list-action.left {
