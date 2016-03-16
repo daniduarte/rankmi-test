@@ -2,6 +2,16 @@
 
 (function(undefined, window, dodument, _){
 
+  /**
+   * getColumnPosition
+   *
+   * Add a string with sucesives letters from alphabeth (e.g. ABC), 
+   * so that returns the linear position on the alphabeth
+   * 
+   * @param {string} inputData
+   * @return {int} position
+   *
+   **/
   function getColumnPosition(inputData){
 
     var inputData = inputData.toString().toLowerCase().split('');
