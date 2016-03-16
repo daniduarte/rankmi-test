@@ -13,9 +13,13 @@ app.controller('TaskListController', function(){
 
   taskList.addTodo = function(){
     taskList.tasks.push({
-      text: 'Comprar leche para la semana',
+      text: taskList.taskText || 'Tarea sin nombre',
       done: false
     });
+
+    taskList.taskText = '';
   };
+
+
 
 });
