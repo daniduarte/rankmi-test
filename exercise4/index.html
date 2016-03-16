@@ -9,15 +9,19 @@
 </head>
 <body>
   
-  <div ng-app="taskerApp">
+  <div ng-app="taskerApp" class="container">
 
-    <div ng-controller="TaskListCtrl as taskList">
-      <h3>Tasker</h3>
-
-      <ul>
-        <li ng-repeat="task in taskList.tasks">{{ task.text }}</li>
-      </ul>
-
+    <div ng-controller="TaskListCtrl as taskList" class="row">
+      <div class="col-sm-6 col-sm-offset-3">
+        <div class="panel panel-default">
+          <div class="panel-heading">
+            <h3 class="panel-title">Tasker</h3>
+          </div>
+        </div>
+        <ul class="list-group">
+          <li class="list-group-item" ng-repeat="task in taskList.tasks">{{ task.text }}</li>
+        </ul>
+      </div>
     </div>
 
   </div>
