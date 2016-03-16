@@ -2,7 +2,6 @@
 app.controller('TaskListController', ['$scope', 'TasksService', function($scope, TasksService){
   var self = this;
   self.tasks = TasksService.tasks;
-  // self.showComments = false;
 
   self.addTask = function(){
     var data = {
