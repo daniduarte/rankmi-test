@@ -4,8 +4,8 @@
 
   function getColumnPosition(inputData){
 
-    var inputData = inputData.toString().split('');
-    var alphabeth = 'abcdefghijklmnopqrstuvwxyz'.toLowerCase().split('');
+    var inputData = inputData.toString().toLowerCase().split('');
+    var alphabeth = 'abcdefghijklmnopqrstuvwxyz'.split('');
     var positions = [];
     var i = 0;
 
