@@ -29,7 +29,7 @@
         }
       }
 
-      return [{ index1 : numbers.indexOf(n1) }, { index2 : numbers.indexOf(n2) }]
+      return [{ index1 : numbers.indexOf(n1), index2 : numbers.indexOf(n2) }]
 
     } else {
       return null;
