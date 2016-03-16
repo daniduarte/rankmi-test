@@ -30,7 +30,7 @@
               </div> 
 
               <div class="list-action">
-                <a href="#" class="list-action-item">
+                <a href="#" class="list-action-item" ng-click="taskList.toggleComments(task)">
                   <span class="badge">{{task.comments.length || 0}}</span>
                   <i class="fa fa-comments"></i>
                 </a>
@@ -39,7 +39,7 @@
                 </a>
               </div>   
 
-              <div class="comment-group">
+              <div class="comment-group" ng-show="task.showComments">
                 <div class="comment-group-item" ng-repeat="comment in task.comments">
                   {{comment}}
                 </div>

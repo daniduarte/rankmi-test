@@ -2,6 +2,7 @@
 app.controller('TaskListController', ['$scope', 'TasksService', function($scope, TasksService){
   var self = this;
   self.tasks = TasksService.tasks;
+  // self.showComments = false;
 
   self.addTask = function(){
     var data = {
@@ -25,5 +26,13 @@ app.controller('TaskListController', ['$scope', 'TasksService', function($scope,
     var data = task;
     var commentText = commentText || 'Comentario vacío';
     TasksService.addComment(data, commentText);
+  };
+
+  self.toggleComments = function(task){
+    if(task.showComments){
+      task.showComments = false;
+    } else {
+      task.showComments = true;
+    }
   };
 }]);
