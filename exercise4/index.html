@@ -13,33 +13,33 @@
   <div ng-app="taskerApp" class="container">
 
     <div ng-controller="TaskListController as taskList" class="row">
-      <div class="col-sm-6 col-sm-offset-3">
+      <div class="col-sm-6 col-sm-offset-3 col-xs-12">
         <div class="panel panel-default">
           <div class="panel-heading">
             <h3 class="panel-title">Tasker</h3>
           </div>
-        </div>
-        <ul class="list-group">
-          <li class="list-group-item" ng-repeat="task in taskList.tasks">
-            {{ task.text }}
 
-            <div class="list-action left">
-              <a href="#" class="list-action-item">
-                <i class="fa fa-circle-o"></i>
-              </a>
-            </div> 
+          <ul class="list-group">
+            <li class="list-group-item" ng-repeat="task in taskList.tasks">
+              {{ task.text }}
 
-            <div class="list-action">
-              <a href="#" class="list-action-item">
-                <span class="badge">14</span>
-                <i class="fa fa-comments"></i>
-              </a>
-              <a href="#" class="list-action-item">
-                <i class="fa fa-trash-o"></i>
-              </a>
-            </div>            
-          </li>
-        </ul>
+              <div class="list-action left">
+                <a href="#" class="list-action-item">
+                  <i class="fa fa-circle-o"></i>
+                </a>
+              </div> 
+
+              <div class="list-action">
+                <a href="#" class="list-action-item">
+                  <span class="badge">14</span>
+                  <i class="fa fa-comments"></i>
+                </a>
+                <a href="#" class="list-action-item">
+                  <i class="fa fa-trash-o"></i>
+                </a>
+              </div>            
+            </li>
+          </ul>
 
           <div class="panel-footer">
             <form class="form-inline">
