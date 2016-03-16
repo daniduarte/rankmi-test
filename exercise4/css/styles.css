@@ -41,6 +41,11 @@ body {
   padding-left: 50px;
 }
 
+.list-group-item .muted {
+  text-decoration: line-through;
+  color: #999;
+}
+
 .comment-group {
   overflow: hidden;
   position: relative;

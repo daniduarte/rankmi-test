@@ -19,6 +19,10 @@ app.factory('TasksService', function(){
       var index = tasks.indexOf(data);
       tasks.splice(index, 1);
     },
+    setDone: function(data){
+      var index = tasks.indexOf(data);
+      tasks[index] = data;
+    },
 
     // Comments
     addComment: function(data, commentText){     

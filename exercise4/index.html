@@ -20,12 +20,13 @@
           </div>
 
           <ul class="list-group">
-            <li class="list-group-item" ng-repeat="task in taskList.tasks track by $index">
-              {{ task.text }}
+            <li class="list-group-item"  ng-repeat="task in taskList.tasks track by $index">
+              <span ng-class="{ 'muted' : task.done }">{{ task.text }}</span>
 
               <div class="list-action left">
-                <a href="#" class="list-action-item">
-                  <i class="fa fa-circle-o"></i>
+                <a href="#" class="list-action-item" ng-click="taskList.setDone(task)">
+                  <i ng-hide="task.done" class="fa fa-circle-o"></i>
+                  <i ng-show="task.done" class="fa fa-circle"></i>
                 </a>
               </div> 
 

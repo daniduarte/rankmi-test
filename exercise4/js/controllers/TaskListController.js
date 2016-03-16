@@ -35,4 +35,17 @@ app.controller('TaskListController', ['$scope', 'TasksService', function($scope,
       task.showComments = true;
     }
   };
+
+  self.setDone = function(task){
+    var data = task;
+
+    if(data.done == false){
+      data.done = true;
+    } else {
+      data.done = false;
+    }
+
+    TasksService.setDone(data);
+  };
 }]);
+
