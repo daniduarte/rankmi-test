@@ -13,7 +13,11 @@ app.controller('TaskListController', ['$scope', 'TasksService', function($scope,
     TasksService.addTask(data);
 
     self.taskText = '';
-
-    console.log(TasksService.tasks);
   };
+
+  self.removeTask = function(task){
+    var data = task;
+
+    TasksService.removeTask(data);
+  }
 }]);

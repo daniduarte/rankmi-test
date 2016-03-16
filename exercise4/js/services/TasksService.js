@@ -14,7 +14,8 @@ app.factory('TasksService', function(){
       tasks.push(data);
     },
     removeTask: function(data){
-      task.splice(data);
+      var index = tasks.indexOf(data);
+      tasks.splice(index, 1);
     }
   }
 });
