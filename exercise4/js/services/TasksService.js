@@ -10,12 +10,20 @@ app.factory('TasksService', function(){
 
   return {
     tasks: tasks,
+
+    // Tasks
     addTask: function(data){
       tasks.push(data);
     },
     removeTask: function(data){
       var index = tasks.indexOf(data);
       tasks.splice(index, 1);
+    },
+
+    // Comments
+    addComment: function(data, commentText){     
+      data.comments.push(commentText);
     }
+
   }
 });

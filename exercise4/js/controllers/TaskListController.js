@@ -19,5 +19,11 @@ app.controller('TaskListController', ['$scope', 'TasksService', function($scope,
     var data = task;
 
     TasksService.removeTask(data);
-  }
+  };
+
+  self.addCommentToTask = function(task, commentText){
+    var data = task;
+    var commentText = commentText || 'Comentario vacío';
+    TasksService.addComment(data, commentText);
+  };
 }]);

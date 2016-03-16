@@ -20,7 +20,7 @@
           </div>
 
           <ul class="list-group">
-            <li class="list-group-item" ng-repeat="task in taskList.tasks">
+            <li class="list-group-item" ng-repeat="task in taskList.tasks track by $index">
               {{ task.text }}
 
               <div class="list-action left">
@@ -44,9 +44,9 @@
                   {{comment}}
                 </div>
                 <div class="comment-group-item">
-                  <form class="form-inline">
+                  <form class="form-inline" ng-submit="taskList.addCommentToTask(task, commentText[$index])">
                     <div class="form-group">
-                      <input type="text" class="form-control" id="newComment" placeholder="New comment">
+                      <input type="text" class="form-control" id="newComment" ng-model="commentText[$index]" placeholder="New comment">
                     </div>
                     <button type="submit" class="btn btn-default">Add comment</button>
                   </form>
