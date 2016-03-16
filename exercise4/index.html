@@ -5,6 +5,7 @@
   <title>Exercise #4</title>
   <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.6/css/bootstrap.min.css" integrity="sha384-1q8mTJOASx8j1Au+a5WDVnPi2lkFfwwEAa8hDDdjZlpLegxhjVME1fgjWPGmkzs7" crossorigin="anonymous">
   <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.6/css/bootstrap-theme.min.css" integrity="sha384-fLW2N01lMqjakBkx3l/M9EahuwpSfeNvV63J5ezn3uZzapT0u7EYsXMjQV+0En5r" crossorigin="anonymous">
+  <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/font-awesome/4.5.0/css/font-awesome.min.css">
   <link rel="stylesheet" href="css/styles.css">
 </head>
 <body>
@@ -19,7 +20,25 @@
           </div>
         </div>
         <ul class="list-group">
-          <li class="list-group-item" ng-repeat="task in taskList.tasks">{{ task.text }}</li>
+          <li class="list-group-item" ng-repeat="task in taskList.tasks">
+            {{ task.text }}
+
+            <div class="list-action left">
+              <a href="#" class="list-action-item">
+                <i class="fa fa-circle-o"></i>
+              </a>
+            </div> 
+
+            <div class="list-action">
+              <a href="#" class="list-action-item">
+                <span class="badge">14</span>
+                <i class="fa fa-comments"></i>
+              </a>
+              <a href="#" class="list-action-item">
+                <i class="fa fa-trash-o"></i>
+              </a>
+            </div>            
+          </li>
         </ul>
       </div>
     </div>
