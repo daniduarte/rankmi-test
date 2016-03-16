@@ -31,18 +31,32 @@
 
               <div class="list-action">
                 <a href="#" class="list-action-item">
-                  <span class="badge">14</span>
+                  <span class="badge">{{task.comments.length || 0}}</span>
                   <i class="fa fa-comments"></i>
                 </a>
                 <a href="#" class="list-action-item">
                   <i class="fa fa-trash-o"></i>
                 </a>
-              </div>            
+              </div>   
+
+              <div class="comment-group">
+                <div class="comment-group-item" ng-repeat="comment in task.comments">
+                  {{comment}}
+                </div>
+                <div class="comment-group-item">
+                  <form class="form-inline">
+                    <div class="form-group">
+                      <input type="text" class="form-control" id="newComment" placeholder="New comment">
+                    </div>
+                    <button type="submit" class="btn btn-default">Add comment</button>
+                  </form>
+                </div>
+              </div>         
             </li>
           </ul>
 
           <div class="panel-footer">
-            <form class="form-inline" ng-submit="taskList.addTodo()">
+            <form class="form-inline" ng-submit="taskList.addTask()">
               <div class="form-group">
                 <input type="text" class="form-control" id="newTask" ng-model="taskList.taskText" placeholder="New task">
               </div>
@@ -59,6 +73,8 @@
   <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.6/js/bootstrap.min.js" integrity="sha384-0mSbJDEHialfmuBBQP6A4Qrprq5OVfW37PRR3j5ELqxss1yVqOtnepnHVP9aJ7xS" crossorigin="anonymous"></script>
   <script type="text/javascript" src="https://ajax.googleapis.com/ajax/libs/angularjs/1.5.0/angular.min.js"></script>
   <script type="text/javascript" src="js/app.js"></script>
+  <script type="text/javascript" src="js/services/TasksService.js"></script>
   <script type="text/javascript" src="js/controllers/TaskListController.js"></script>
+  
 </body>
 </html>

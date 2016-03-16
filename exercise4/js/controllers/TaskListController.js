@@ -1,25 +1,19 @@
 
-app.controller('TaskListController', function(){
+app.controller('TaskListController', ['$scope', 'TasksService', function($scope, TasksService){
+  var self = this;
+  self.tasks = TasksService.tasks;
 
-  var taskList = this;
+  self.addTask = function(){
+    var data = {
+      text: self.taskText || 'Tarea sin nombre',
+      done: false, 
+      comments: []
+    };
 
-  taskList.tasks = [
-    { text: 'Comprar pan para la once', done: false },
-    { text: 'Limpiar el baño de visitas', done: true },
-    { text: 'Regar las plantas del patio de atrás', done: false },
-    { text: 'Lavar la ropa', done: false },
-    { text: 'Pintar bodega chica', done: false }
-  ];
+    TasksService.addTask(data);
 
-  taskList.addTodo = function(){
-    taskList.tasks.push({
-      text: taskList.taskText || 'Tarea sin nombre',
-      done: false
-    });
+    self.taskText = '';
 
-    taskList.taskText = '';
+    console.log(TasksService.tasks);
   };
-
-
-
-});
+}]);

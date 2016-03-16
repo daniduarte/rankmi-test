@@ -1,3 +1,3 @@
 
-app = angular.module('taskerApp', []);
+var app = angular.module('taskerApp', []);
 

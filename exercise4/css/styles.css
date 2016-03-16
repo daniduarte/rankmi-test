@@ -41,3 +41,23 @@ body {
   padding-left: 50px;
 }
 
+.comment-group {
+  overflow: hidden;
+  position: relative;
+  margin: 10px -15px -11px -13px;
+  border-top: 1px solid #ddd;
+}
+
+.comment-group .comment-group-item {
+  display: block;
+  position: relative;
+  border-bottom: 1px solid #ddd;
+  border-left: 1px solid #ddd;
+  padding: 10px;
+  background: #eee;
+  font-size: 12px;
+  font-style: italic;
+}
+
+
+
